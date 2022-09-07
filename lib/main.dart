@@ -9,31 +9,31 @@ class MyApp extends StatelessWidget {
 
   final _formKey = GlobalKey<FormState>();
 
-  final _memberId = TextEditingController();
-  final _memberPw = TextEditingController();
-  final _memberPwc = TextEditingController();
-  final _memberName = TextEditingController();
-  final _memberEmail = TextEditingController();
-  final _memberBirthday = TextEditingController();
-  final _memberAddress1 = TextEditingController();
-  final _memberAddress2 = TextEditingController();
-  final _memberAddress3 = TextEditingController();
-  final _memberAddress4 = TextEditingController();
-  final _memberGender = TextEditingController();
-  final _memberPhone = TextEditingController();
+  final _nickname = TextEditingController();
+  final _pw = TextEditingController();
+  final _pwc = TextEditingController();
+  final _name = TextEditingController();
+  final _email = TextEditingController();
+  final _birthday = TextEditingController();
+  final _address1 = TextEditingController();
+  final _address2 = TextEditingController();
+  final _address3 = TextEditingController();
+  final _address4 = TextEditingController();
+  final _gender = TextEditingController();
+  final _phone = TextEditingController();
 
-  String? memberId;
-  String? memberPw;
-  String? memberPwc;
-  String? memberName;
-  String? memberEmail;
-  String? memberBirthday;
-  String? memberAddress1;
-  String? memberAddress2;
-  String? memberAddress3;
-  String? memberAddress4;
-  String? memberGender;
-  String? memberPhone;
+  String? nickname;
+  String? pw;
+  String? pwc;
+  String? name;
+  String? email;
+  String? birthday;
+  String? address1;
+  String? address2;
+  String? address3;
+  String? address4;
+  String? gender;
+  String? phone;
 
   @override
   Widget build(BuildContext context) {
@@ -48,130 +48,130 @@ class MyApp extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 TextFormField(
-                  controller: _memberId,
+                  controller: _nickname,
                   decoration:
                       InputDecoration(hintText: "아이디를입력해주세요", labelText: "아이디"),
-                  validator: (memberId) {
-                    if (memberId!.isEmpty) {
+                  validator: (nickname) {
+                    if (nickname!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberPw,
+                  controller: _pw,
                   decoration: InputDecoration(
                       hintText: "비밀번호를입력해주세요", labelText: "비밀번호"),
-                  validator: (memberPw) {
-                    if (memberPw!.isEmpty) {
+                  validator: (pw) {
+                    if (pw!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberPwc,
+                  controller: _pwc,
                   decoration: InputDecoration(
                       hintText: "비밀번호를입력해주세요", labelText: "비밀번호재확인"),
-                  validator: (memberPwc) {
-                    if (memberPwc!.isEmpty) {
+                  validator: (pwc) {
+                    if (pwc!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberName,
+                  controller: _name,
                   decoration:
                       InputDecoration(hintText: "이름을입력해주세요", labelText: "이름"),
-                  validator: (memberName) {
-                    if (memberName!.isEmpty) {
+                  validator: (name) {
+                    if (name!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberEmail,
+                  controller: _email,
                   decoration: InputDecoration(
                       hintText: "abc@exampl.com", labelText: "이메일"),
-                  validator: (memberEmail) {
-                    if (memberEmail!.isEmpty) {
+                  validator: (email) {
+                    if (email!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberAddress1,
+                  controller: _address1,
                   decoration: InputDecoration(hintText: "주소1", labelText: "주소"),
-                  validator: (memberAddress1) {
-                    if (memberAddress1!.isEmpty) {
+                  validator: (address1) {
+                    if (address1!.isEmpty) {
                       return '빈값';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberAddress2,
+                  controller: _address2,
                   decoration:
                       InputDecoration(hintText: "주소2", labelText: "주소2"),
-                  validator: (memberAddress2) {
-                    if (memberAddress2!.isEmpty) {
+                  validator: (address2) {
+                    if (address2!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberAddress3,
+                  controller: _address3,
                   decoration:
                       InputDecoration(hintText: "주소3", labelText: "주소3"),
-                  validator: (memberAddress3) {
-                    if (memberAddress3!.isEmpty) {
+                  validator: (address3) {
+                    if (address3!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberAddress4,
+                  controller: _address4,
                   decoration:
                       InputDecoration(hintText: "주소4", labelText: "주소5"),
-                  validator: (memberAddress4) {
-                    if (memberAddress4!.isEmpty) {
+                  validator: (address4) {
+                    if (address4!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberBirthday,
+                  controller: _birthday,
                   decoration: InputDecoration(
                       hintText: "-없이 입력해주세요", labelText: "생년월일"),
-                  validator: (memberBirthday) {
-                    if (memberBirthday!.isEmpty) {
+                  validator: (birthday) {
+                    if (birthday!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberGender,
+                  controller: _gender,
                   decoration: InputDecoration(hintText: "성별", labelText: "성별"),
-                  validator: (memberGender) {
-                    if (memberGender!.isEmpty) {
+                  validator: (gender) {
+                    if (gender!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
                   },
                 ),
                 TextFormField(
-                  controller: _memberPhone,
+                  controller: _phone,
                   decoration: InputDecoration(
                       hintText: "010-1111-1111", labelText: "전화번호"),
-                  validator: (memberPhone) {
-                    if (memberPhone!.isEmpty) {
+                  validator: (phone) {
+                    if (phone!.isEmpty) {
                       return 'Please enter some text';
                     }
                     return null;
@@ -185,18 +185,18 @@ class MyApp extends StatelessWidget {
                         if (_formKey.currentState!.validate()) {
                           _formKey.currentState?.save();
                           serviceTest.valueTest(
-                              _memberId.text,
-                              _memberPw.text,
-                              _memberPwc.text,
-                              _memberEmail.text,
-                              _memberName.text,
-                              _memberAddress1.text,
-                              _memberAddress2.text,
-                              _memberAddress3.text,
-                              _memberAddress4.text,
-                              _memberBirthday.text,
-                              _memberGender.text,
-                              _memberPhone.text);
+                              _nickname.text,
+                              _pw.text,
+                              _pwc.text,
+                              _email.text,
+                              _name.text,
+                              _address1.text,
+                              _address2.text,
+                              _address3.text,
+                              _address4.text,
+                              _birthday.text,
+                              _gender.text,
+                              _phone.text);
                         }
                       },
                       child: const Text('Submit'),
