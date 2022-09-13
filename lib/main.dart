@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
                 TextFormField(
                   controller: _nickname,
                   decoration:
-                      InputDecoration(hintText: "아이디를입력해주세요", labelText: "아이디"),
+                  InputDecoration(hintText: "아이디를입력해주세요", labelText: "아이디"),
                   validator: (nickname) {
                     if (nickname!.isEmpty) {
                       return 'Please enter some text';
@@ -83,7 +83,7 @@ class MyApp extends StatelessWidget {
                 TextFormField(
                   controller: _name,
                   decoration:
-                      InputDecoration(hintText: "이름을입력해주세요", labelText: "이름"),
+                  InputDecoration(hintText: "이름을입력해주세요", labelText: "이름"),
                   validator: (name) {
                     if (name!.isEmpty) {
                       return 'Please enter some text';
@@ -115,7 +115,7 @@ class MyApp extends StatelessWidget {
                 TextFormField(
                   controller: _address2,
                   decoration:
-                      InputDecoration(hintText: "주소2", labelText: "주소2"),
+                  InputDecoration(hintText: "주소2", labelText: "주소2"),
                   validator: (address2) {
                     if (address2!.isEmpty) {
                       return 'Please enter some text';
@@ -126,7 +126,7 @@ class MyApp extends StatelessWidget {
                 TextFormField(
                   controller: _address3,
                   decoration:
-                      InputDecoration(hintText: "주소3", labelText: "주소3"),
+                  InputDecoration(hintText: "주소3", labelText: "주소3"),
                   validator: (address3) {
                     if (address3!.isEmpty) {
                       return 'Please enter some text';
@@ -137,7 +137,7 @@ class MyApp extends StatelessWidget {
                 TextFormField(
                   controller: _address4,
                   decoration:
-                      InputDecoration(hintText: "주소4", labelText: "주소5"),
+                  InputDecoration(hintText: "주소4", labelText: "주소5"),
                   validator: (address4) {
                     if (address4!.isEmpty) {
                       return 'Please enter some text';
@@ -179,28 +179,31 @@ class MyApp extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 50.0),
-                  child: Center(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          _formKey.currentState?.save();
-                          serviceTest.valueTest(
-                              _nickname.text,
-                              _pw.text,
-                              _pwc.text,
-                              _email.text,
-                              _name.text,
-                              _address1.text,
-                              _address2.text,
-                              _address3.text,
-                              _address4.text,
-                              _birthday.text,
-                              _gender.text,
-                              _phone.text);
-                        }
-                      },
-                      child: const Text('Submit'),
-                    ),
+                  child: Row(
+                      children: [
+                        ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            _formKey.currentState?.save();
+                            serviceTest.valueTest(
+                                _nickname.text,
+                                _pw.text,
+                                _pwc.text,
+                                _email.text,
+                                _name.text,
+                                _address1.text,
+                                _address2.text,
+                                _address3.text,
+                                _address4.text,
+                                _birthday.text,
+                                _gender.text,
+                                _phone.text);
+                          }
+                        },
+                        child: const Text('Submit'),
+                      ),
+                      ]
+
                   ),
                 ),
               ],

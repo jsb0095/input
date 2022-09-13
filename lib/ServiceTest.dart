@@ -18,28 +18,28 @@ class ServiceTest {
       String birthday,
       String gender,
       String phone) async {
-    List<String> queryJson = [
-      "id:$nickname",
-      "pw:$pw",
-      "pwc:$pwc",
-      "email:$email",
-      "name:$name",
-      "address1:$address1",
-      "address2:$address2",
-      "address3:$address3",
-      "address4:$address4",
-      "birthday:$birthday",
-      "gender:$gender",
-      "phone:$phone"
-    ];
+    Map<String, dynamic> queryjson = {
+    "id":nickname,
+    "pw":pw,
+    "pwc":pwc,
+    "email":email,
+    "name":name,
+    "address1":address1,
+    "address2":address2,
+    "address3":address3,
+    "address4":address4,
+    "birthday":birthday,
+    "gender":gender,
+    "phone": phone
+  };
 
     var url = Uri.parse("http://localhost:9111/api");
-    var requestData = jsonEncode(queryJson);
+    var requestData = jsonEncode(queryjson);
     print("스프링부트 전송");
     http.Response response = await http.post(url,
-        headers: {"Accept": "application/json"}, body: jsonEncode(queryJson));
+        headers: {"Content-Type": "application/json"}, body: requestData);
     if (response.statusCode == 200) {
-      print(queryJson);
+      print(requestData);
       // Map responseBodyMap = jsonDecode(response.body);
       return null;
     }
